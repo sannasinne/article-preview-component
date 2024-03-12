@@ -82,9 +82,10 @@ h1 {
   font-size: 1.25rem;
   font-weight: var(--fw-bold);
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 714px) {
   h1 {
     font-size: 1rem;
   }
@@ -98,7 +99,6 @@ h1 {
   height: 280px;
 
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .card__image {
@@ -108,4 +108,68 @@ h1 {
 .card__image img {
   height: 100%;
   width: 100%;;
+}
+
+.card__info {
+  padding: 32px 40px;
+}
+
+.card__info-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.card__info-author img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card__info-author-name span {
+  color: var(--clr-very-dark-grayish-blue);
+  font-weight: var(--fw-bold);
+}
+
+.card__info-share {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background-color: var(--clr-light-grayish-blue);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card__info-share-social {
+  position: absolute;
+  top: -80px;
+  background-color: var(--clr-very-dark-grayish-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 248px;
+  padding: 18px 36px;
+  border-radius: 10px;
+  display: none;
+}
+
+.card__info-share-social p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.card__info-share-social::after {
+  display: block; 
+  width: 0; 
+  content: "";
+  border: 15px solid transparent;
+  border-top-color: var(--clr-very-dark-grayish-blue);
+  border-bottom: 0;
+  position: absolute;
+  bottom: -15px; 
+  left: calc(50% - 15px);
 }
