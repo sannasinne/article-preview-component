@@ -69,7 +69,7 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-medium);
   font-size: 0.8125rem;
-  color: var(--clr-grayish-blue);
+  color: var(--clr-desaturated-dark-blue);
   background-color: var(--clr-light-grayish-blue);
 
   display: grid;
@@ -103,6 +103,8 @@ h1 {
 
 .card__image {
   flex: 0 0 285px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
 }
 
 .card__image img {
@@ -126,6 +128,10 @@ h1 {
   border-radius: 50%;
 }
 
+.card__info-author-name p {
+  color: var(--clr-grayish-blue);
+}
+
 .card__info-author-name span {
   color: var(--clr-very-dark-grayish-blue);
   font-weight: var(--fw-bold);
@@ -140,8 +146,17 @@ h1 {
   background-color: var(--clr-light-grayish-blue);
   width: 32px;
   height: 32px;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.share-click {
+  background-color: var(--clr-desaturated-dark-blue);
+}
+
+.share-click-icon {
+  fill: var(--clr-white);
 }
 
 .card__info-share-social {
@@ -154,12 +169,18 @@ h1 {
   width: 248px;
   padding: 18px 36px;
   border-radius: 10px;
-  display: none;
+  opacity: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card__info-share-social.show {
+  opacity: 1;
 }
 
 .card__info-share-social p {
   text-transform: uppercase;
   letter-spacing: 5px;
+  color: var(--clr-grayish-blue);
 }
 
 .card__info-share-social::after {
